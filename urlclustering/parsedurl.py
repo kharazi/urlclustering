@@ -33,7 +33,7 @@ class ParsedURL():
             for i, part in enumerate(elems):
                 sep = '?' if i == 0 else '&'
                 if '=' in part:
-                    par, val = part.split('=')
+                    par, val = part.split('=', 1)
                     self._parts.append((sep, par))
                     self._parts.append(('=', val))
                 else:
